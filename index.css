@@ -1,0 +1,30 @@
+body {
+    color: white;
+    background-color: rgb(43, 41, 41);
+}
+
+#tech-photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tech-photo {
+    height: 250px;
+    width: 250px;
+}
+
+.javascript-photo {
+    height: 350px;
+    width: 350px;    
+}
+
+.react-photo {
+    height: 250px;
+    width: 300px;    
+}
+
+.summary-text {
+    font-size: large;
+}

@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"
+		href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./image_slider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css" integrity="sha384-s5lqL1NMu1TdDS/75EsR2IKqj5g2SbplE63nRqwT70/kcm2uFLqKGOCp1phJ2ENd" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha384-4D3G3GikQs6hLlLZGdz5wLFzuqE9v4yVGAcOH86y23JqBDPzj9viv0EqyfIa6YUL" crossorigin="anonymous"></script>
     <title>Team I Project Breakdown</title>
 </head>
     <body>
@@ -11,16 +18,118 @@
         <h2>Contributors: Brandon Jones, Sean Hurley, Scott Melton, Allan Elfe</h2>
         <h2>Client: Andre Denham</h2>
         <p>Github Repository Link: <a href="https://github.com/seanbama24/bama-grad-pdf-template-generator.git" target="_blank">https://github.com/seanbama24/bama-grad-pdf-template-generator.git</a></p>
+        <button style="background-color: rgb(43, 41, 41); border-radius: 5px;"><a style="padding: 5px; color:white" href="./Dissertation.docx" target="_blank">Sample Generated Document</a></button>
         <br />
+        <h1>Demo:</h1>
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/_2tRzBavEYk" title="Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <h1>Project Summary:</h1>
-        <p class="summary-text">This project centers around creating a website that allows graduate students to create templates for their dissertation. Users will go through a process which includes a series of 9 steps, in order to give information to the genereator, so that the perfect document is made for them.</p>
-        <br />
-        <h1 alt="Technology Section">Technology:</h1>
+        <div id="project-overview">
+            <div>        
+                <p id="summary-text">
+                    Overview:
+                    <br/>
+                    The current process for submitting a thesis in the UA graduate school is deemed inefficient, with a notable emphasis on addressing formatting issues rather than evaluating the substantive content of the theses. To streamline and enhance this process, we have developed a web application mirroring the functionality of an established ASU document generator previously utilized by Dr. Denham. By implementing this solution, we anticipate a marked improvement in the efficiency of operations at the Graduate School. The application aims to minimize the need for manual document checks, as the generated documents adhere to the requisite formatting standards, alleviating the burden of formatting-related challenges and allowing for a more streamlined and effective workflow.
+                    <br/>
+                    The Thesis and Dissertation Template Generator is an online platform designed to streamline the process of creating academic documents for graduate students. This user-friendly website empowers users to customize and generate personalized templates for their theses or dissertations, ensuring adherence to formatting guidelines and saving valuable time during the document creation process.
+                    <br/>
+                </p>
+            </div>
+            <div id="image-slider">
+                <!-- Image container of the image slider -->
+                <div class="image-container">
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 1.png">
+                    </div>
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 2.png">
+                    </div>
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 3.png">
+                    </div>
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 4.png">
+                    </div>
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 5.png">
+                    </div>
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 6.png">
+                    </div>
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 7.png">
+                    </div>
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 8.png">
+                    </div>
+                    <div class="slide">
+                        <img src="Photos/Page Screenshots/Page 9.png">
+                    </div>
+                    <!-- Next and Previous icon to change images -->
+                    <a class="previous" onclick="moveSlides(-1)">
+                        <i class="fa fa-chevron-circle-left"></i>
+                    </a>
+                    <a class="next" onclick="moveSlides(1)">
+                        <i class="fa fa-chevron-circle-right"></i>
+                    </a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="footerdot" onclick="activeSlide(1)">
+                    </span>
+                    <span class="footerdot" onclick="activeSlide(2)">
+                    </span>
+                    <span class="footerdot" onclick="activeSlide(3)">
+                    </span>
+                    <span class="footerdot" onclick="activeSlide(4)">
+                    </span>
+                    <span class="footerdot" onclick="activeSlide(5)">
+                    </span>
+                    <span class="footerdot" onclick="activeSlide(6)">
+                    </span>
+                    <span class="footerdot" onclick="activeSlide(7)">
+                    </span>
+                    <span class="footerdot" onclick="activeSlide(8)">
+                    </span>
+                    <span class="footerdot" onclick="activeSlide(9)">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <p class="features"> 
+            Key Features:
+            <br/>
+            <ul class="features">
+                <p class="underline">User-Friendly Interface:</p>
+                <!-- <br/> -->
+                <li>Intuitive design to provide a seamless experience for users.</li>
+                <li>Easy navigation through a series of 9 steps, ensuring a straightforward process.</li>
+                <!-- <br/> -->
+                <p class="underline">Step-by-Step Customization:</p>
+                <!-- <br/> -->
+                <li>Users go through a structured sequence of steps, providing essential information for template generation.</li>
+                <li>Each step focuses on a specific aspect of the document, such as formatting style, chapter organization, citation style, etc.</li>
+                <p class="underline">Customization Options:</p>
+                <!-- <br/> -->
+                <li>Multiple template customization options, allowing users to tailor the document according to their program's requirements.</li>
+                <li>Flexibility in choosing font styles, page layouts, and other formatting elements.</li>
+                <!-- <br/> -->
+                <p class="underline">Guided Content Input:</p>
+                <!-- <br/> -->
+                <li>Guidance prompts to assist users in providing necessary information for each section of the document.</li>
+                <li>Suggestions and examples to help users make informed decisions during the customization process.</li>
+                <!-- <br/> -->
+                <p class="underline">Export Options:</p>
+                <!-- <br/> -->
+                <li>Generated Document is exported as a Word Document for the student to edit.</li>
+            </ul>
+        </p>
+        <h1 alt="Technology Section">Tech Stack:</h1>
         <div id="tech-photos">
-            <img src="Photots/HTML Logo .png" alt="HTML Logo" class="tech-photo">
-            <img src="Photots/CSS Logo.png" alt="CSS Logo" class="tech-photo">
-            <img src="Photots/JavaScript Logo.png" alt="JavaScript Logo" class="javascript-photo">
-            <img src="Photots/React Logo w-o Background.png" alt="React Logo" class="react-photo">
+            <a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank"><img src="Photos/Logos/HTML Logo.png" alt="HTML Logo" class="tech-photo" title="HTML"></a>
+            <!-- <div class="hide">I am shown when someone hovers over the div above.</div> -->
+            <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank"><img src="Photos/Logos/CSS Logo.png" alt="CSS Logo" class="tech-photo" title="CSS"></a>
+            <a href="https://www.javascript.com/" target="_blank"><img src="Photos/Logos/JavaScript Logo.png" alt="JavaScript Logo" class="javascript-photo" title="JavaScript"></a>
+            <a href="https://legacy.reactjs.org/" target="_blank"><img src="Photos/Logos/React Logo w-o Background.png" alt="React Logo" class="react-photo" title="ReactJS"></a>
         </div>
         <div id="project-goals">
             <h1>Project Goals:</h1>
@@ -32,6 +141,59 @@
                 <li>Prepare Presentation</li>
                 <li>Build Stepping Functionality</li>
             </ul>
+            <h2>Sprint 2</h2>
+            <ul>
+                <li>Styling of custom components (steps)</li>
+                <li>Unify style of custom components</li>
+                <li>Determine list of all data points/fields that need to be collected in form</li>
+                <li>Implement state/data flow of form object</li>
+                <li>Create basic document generation script (proof of concept)</li>
+            </ul>
+            <h2>Sprint 3</h2>
+            <ul>
+                <li>Style components of the website for better visual flare</li>
+                <li>Improve general content in the website.</li>
+                <li>Finish document generation</li>
+                <li>Optimize front-end functionality</li>
+            </ul>
         </div>
+        <script>
+            let slideIndex = 1;
+            displaySlide(slideIndex);
+     
+            function moveSlides(n) {
+                displaySlide(slideIndex += n);
+            }
+     
+            function activeSlide(n) {
+                displaySlide(slideIndex = n);
+            }
+     
+            /* Main function */
+            function displaySlide(n) {
+                let i;
+                let totalslides =
+                    document.getElementsByClassName("slide");
+     
+                let totaldots =
+                    document.getElementsByClassName("footerdot");
+     
+                if (n > totalslides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = totalslides.length;
+                }
+                for (i = 0; i < totalslides.length; i++) {
+                    totalslides[i].style.display = "none";
+                }
+                for (i = 0; i < totaldots.length; i++) {
+                    totaldots[i].className =
+                        totaldots[i].className.replace(" active", "");
+                }
+                totalslides[slideIndex - 1].style.display = "block";
+                totaldots[slideIndex - 1].className += " active";
+            }
+        </script>
     </body>
 </html>

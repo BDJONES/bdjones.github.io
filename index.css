@@ -25,6 +25,35 @@ body {
     width: 300px;    
 }
 
-.summary-text {
+#summary-text {
     font-size: large;
+    width: 70%;
+}
+
+.features {
+    font-size: large;
+    width: 50%;
+}
+
+#project-overview {
+    display: flex;
+    justify-content: space-between;
+}
+
+#image-slider {
+    width: 300%;
+    padding: 5px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
+}
+      
+#tech-photos:hover + .hide {
+display: block;
+color: red;
 }
